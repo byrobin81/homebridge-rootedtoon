@@ -1,0 +1,21 @@
+
+    "bridge": {
+        "name": "Homebridge",
+        "username": "CC:22:3D:E3:CE:30",
+        "port": 51826,
+        "pin": "031-45-154"
+    },
+    "description": "This is an example configuration file for Toon.",
+    "accessories": [
+        {
+            "accessory": "RootedToon",
+            "name": "Toon Thermostaat",
+            "apiroute": "http://<YOURROOTEDTOONIP>",
+            "maxTemp": 25,
+            "minTemp": 15,
+            "manufacturer": "Eneco",
+            "model": "RootedToon",
+            "serial_number": "xxx.xxx.xxx.xxx"
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+  "name": "homebridge-rootedtoon",
+  "version": "1.0.0",
+  "description": "Homebridge Extension for Rooted Toon Thermostats",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/byobin81/homebridge-rootedtoon.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge-rootedtoon",
+    "toon"
+  ],
+  "engines": {
+    "homebridge": ">=0.4.22",
+    "node": ">=6.9.1"
+  },
+  "dependencies": {
+    "request": "^2.83.0",
+    "request-promise": "^4.2.2"
+  },
+  "author": "byRobin81",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/byobin81/homebridge-rootedtoon/issues"
+  },
+  "homepage": "https://github.com/byobin81/homebridge-rootedtoon"
+}
