@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/byobin81/homebridge-rootedtoon.git"
+    "url": "https://github.com/byrobin81/homebridge-rootedtoon.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -26,7 +26,7 @@
   "author": "byRobin81",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/byobin81/homebridge-rootedtoon/issues"
+    "url": "https://github.com/byrobin81/homebridge-rootedtoon/issues"
   },
-  "homepage": "https://github.com/byobin81/homebridge-rootedtoon"
+  "homepage": "https://github.com/byrobin81/homebridge-rootedtoon"
 }
