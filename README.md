@@ -1,7 +1,7 @@
 # homebridge-rootedtoon
 This plugin enables homebridge to communicate with a Rooted Toon.
 
-`npm install -g --unsafe-perm homebridge-rootedToon`
+`npm install -g --unsafe-perm homebridge-rootedtoon`
 
 ## Configuration
 The following should be added to the homebridge config.json:
