@@ -62,8 +62,8 @@ class RootedToon{
 	    this.service
                 .getCharacteristic(Characteristic.CurrentTemperature)
 		.setProps({
-			minValue: 50,
-			maxValue: 0,
+			minValue: 0,
+			maxValue: 50,
 			minStep: 0.1
 		})
 		.on('get', this.getCurrentTemperature.bind(this));
