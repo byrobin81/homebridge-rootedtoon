@@ -1,6 +1,6 @@
 {
   "name": "homebridge-rootedtoon",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Homebridge Extension for Rooted Toon Thermostats",
   "main": "index.js",
   "repository": {
