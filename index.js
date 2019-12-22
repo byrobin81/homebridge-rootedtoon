@@ -64,7 +64,7 @@ class RootedToon{
 		.setProps({
 			minValue: 0,
 			maxValue: 50,
-			minStep: 0.1
+			minStep: 0.5
 		})
 		.on('get', this.getCurrentTemperature.bind(this));
 
@@ -73,7 +73,7 @@ class RootedToon{
 		.setProps({
                         minValue: this.minTemp,
                         maxValue: this.maxTemp,
-                        minStep: 0.1
+                        minStep: 0.5
                 })
 		.on('get', this.getTargetTemperature.bind(this))
 		.on('set', this.setTargetTemperature.bind(this));
@@ -126,7 +126,7 @@ class RootedToon{
 			if (!err && response.statusCode == 200) {
 				this.log("response success");
 				var json = JSON.parse(body);
-				var output = (parseFloat(json.currentTemp) / 100).toFixed(0);
+				var output = (parseFloat(json.currentTemp) / 100).toFixed(1);
 				this.currentTemperature = output;
 				this.log("Current temperature is %s", this.currentTemperature);
 				callback(null, this.currentTemperature); // success
@@ -145,7 +145,7 @@ class RootedToon{
 			if (!err && response.statusCode == 200) {
 				this.log("response success");
 				var json = JSON.parse(body);
-				var output = (parseFloat(json.currentSetpoint) / 100).toFixed(0);
+				var output = (parseFloat(json.currentSetpoint) / 100).toFixed(1);
 				this.targetTemperature = output;
 				this.log("Target temperature is %s", this.targetTemperature);
 				callback(null, this.targetTemperature); // success
@@ -157,9 +157,10 @@ class RootedToon{
 	}
 
 	setTargetTemperature(value, callback) {
-		this.log("setTargetTemperature from:", this.apiroute+"/happ_thermstat?action=setSetpoint&Setpoint="+value+"00");
+		var inputValue = value * 100;
+		this.log("setTargetTemperature from:", this.apiroute+"/happ_thermstat?action=setSetpoint&Setpoint="+inputValue);
 		request.get({
-			url: this.apiroute+"/happ_thermstat?action=setSetpoint&Setpoint="+value+"00"
+			url: this.apiroute+"/happ_thermstat?action=setSetpoint&Setpoint="+inputValue
 		}, function(err, response, body) {
 			if (!err && response.statusCode == 200) {
 				this.log("response success");
